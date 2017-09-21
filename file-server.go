@@ -2,11 +2,11 @@ package main
 
 import (
 	"net/http"
-	 "os"
-	)
+	"os"
+)
 
-func main(){
+func main() {
 	// return dir and error
-	dir, _ := os.Getwd();
+	dir, _ := os.Getwd()
 	http.ListenAndServe(":3000", http.FileServer(http.Dir(dir)))
 }
