@@ -11,7 +11,7 @@ export PATH="$PATH:user/local/opt/go/libexec/bin:GOPATH/bin"
 
 echo $GOPATH
 
-## Setup vs code
+## Setup VS code
   Preferences -> settings, add go settings
   ```
   "go.gopath":"/Users/hhuang/Documents/Workspace/Go"
