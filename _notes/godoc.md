@@ -1,2 +1,2 @@
 ##
-  godoc -http:=6000
+  go doc -http:=6000
