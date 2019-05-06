@@ -3,6 +3,9 @@
 - https://thenewstack.io/understanding-golang-packages/
 
 
+## Rules
+- go run: cannot run non-main package
+
 - don't use an underscore in package name (go-lint)
 - don't use MixedCaps in package name; stringStudy should be stringstudy (go-lint)
 
