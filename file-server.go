@@ -1,4 +1,4 @@
-package main
+package gostudy
 
 import (
 	"net/http"
