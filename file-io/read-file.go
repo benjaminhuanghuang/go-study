@@ -6,6 +6,7 @@ import (
 	"io"
 	"io/ioutil"
 	"os"
+	"strings"
 )
 
 func check(e error) {
@@ -15,11 +16,14 @@ func check(e error) {
 }
 
 func readFile() {
-	// Read file
+	// ReadFile returns a byte slice
 	if contents, err := ioutil.ReadFile("/tmp/dat"); err != nil {
 		fmt.Println(err)
 	} else {
-		fmt.Printf("%s\n", contents)
+		// convert slice to string
+		for _, line := range strings.Split(string(contents), "\n") {
+			fmt.Printf("%s\n", line)
+		}
 	}
 }
 
@@ -29,8 +33,9 @@ func readFileLineByLine() {
 		fmt.Println(err)
 	} else {
 		scanner := bufio.NewScanner(f)
+		// read one line
 		for scanner.Scan() {
-			fmt.Println(scanner.Text())
+			fmt.Println(scanner.Text()) // print the line
 		}
 	}
 }

@@ -2,7 +2,8 @@ package main
 
 import "fmt"
 
-func test() {
+// using range with slice
+func findMax() {
 	nums := []int{3, 4, 5, 7, 8, 8}
 
 	max := nums[0]
@@ -14,4 +15,12 @@ func test() {
 	}
 
 	fmt.Println(max)
+}
+
+func sliceAttributes() {
+
+}
+
+func main() {
+
 }
