@@ -20,6 +20,7 @@ func main() {
 	for _, word := range words {
 		counts[strings.ToLower(word)]++
 	}
-
-	fmt.Println(counts)
+	for key, value := range counts {
+		fmt.Printf("Word %q with count %d\n", key, value)
+	}
 }

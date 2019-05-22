@@ -1,4 +1,13 @@
-package conststudy
+package main
+
+func enums() {
+	const (
+		cpp = 0
+		java
+		python
+		golang
+	)
+}
 
 //...
 const (
@@ -26,3 +35,9 @@ const (
 	tb
 	pb
 )
+
+func main() {
+	println(Open)
+	println(b)
+	println(kb)
+}

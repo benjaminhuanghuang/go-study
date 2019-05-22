@@ -16,11 +16,18 @@ func findMax() {
 
 	fmt.Println(max)
 }
+func arrayToSlice() {
+	arr := [...]int{0, 1, 2, 3, 4, 5, 6, 7}
+	s := arr[2:6] // 2,3,4,5
+
+	fmt.Println(s)
+
+}
 
 func sliceAttributes() {
 
 }
 
 func main() {
-
+	arrayToSlice()
 }
