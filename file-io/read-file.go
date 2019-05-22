@@ -8,21 +8,27 @@ import (
 	"os"
 )
 
-// Reading files requires checking most calls for errors.
-// This helper will streamline our error checks below.
 func check(e error) {
 	if e != nil {
 		panic(e)
 	}
 }
 
+func readFile() {
+	// Read file
+	if contents, err := ioutil.ReadFile("/tmp/dat"); err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Printf("%s\n", contents)
+	}
+}
+
 func main() {
 
-	// Perhaps the most basic file reading task is
-	// slurping a file's entire contents into memory.
-	dat, err := ioutil.ReadFile("/tmp/dat")
+	// Read file
+	contents, err := ioutil.ReadFile("/tmp/dat")
 	check(err)
-	fmt.Print(string(dat))
+	fmt.Print(string(contents))
 
 	// You'll often want more control over how and what
 	// parts of a file are read. For these tasks, start

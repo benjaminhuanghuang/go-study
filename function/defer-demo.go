@@ -1,0 +1,5 @@
+package funcstudy
+
+func test() {
+
+}

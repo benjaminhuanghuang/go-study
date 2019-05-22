@@ -15,6 +15,8 @@ func main() {
 
 	words := strings.Fields(text)
 	counts := map[string]int{} // Empty map
+
+	// loop through
 	for _, word := range words {
 		counts[strings.ToLower(word)]++
 	}

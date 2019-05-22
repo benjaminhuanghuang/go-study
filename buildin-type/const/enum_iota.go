@@ -1,7 +1,6 @@
-package gostudy
+package conststudy
 
-import "testing"
-
+//...
 const (
 	Monday = iota + 1
 	Tuesday
@@ -12,12 +11,18 @@ const (
 	Sunday
 )
 
+//...
 const (
 	Open = 1 << iota
 	Close
 	Pending
 )
 
-func TestConstWeek(t *testing.T) {
-	t.Log(Monday, Tuesday)
-}
+const (
+	b = 1 << (10 * iota)
+	kb
+	mb
+	gb
+	tb
+	pb
+)
