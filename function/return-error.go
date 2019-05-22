@@ -13,7 +13,7 @@ func sqrt(n float64) (float64, error) {
 	return math.Sqrt(n), nil
 }
 
-func main() {
+func processErr() {
 	s1, err := sqrt(2.0)
 	if err != nil {
 		fmt.Printf("ERROR: %s\n", err)

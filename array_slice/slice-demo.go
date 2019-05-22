@@ -1,4 +1,4 @@
-package slicestudy
+package main
 
 import "fmt"
 

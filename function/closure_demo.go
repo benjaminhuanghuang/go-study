@@ -6,7 +6,8 @@ func closure(x int) func(int) int {
 	}
 }
 
-func main() {
+func using() int {
 	f := closure(10)
 	result := f(10)
+	return result
 }

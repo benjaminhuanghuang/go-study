@@ -6,15 +6,6 @@ import (
 	"time"
 )
 
-// 可变长参数
-func Sum(ops ...int) int {
-	ret := 0
-	for _, op := range ops {
-		ret += op
-	}
-	return ret
-}
-
 //
 func timeSpan(inner func(op int) int) func(op int) int {
 	return func(n int) int {

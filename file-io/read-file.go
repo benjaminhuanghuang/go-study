@@ -23,6 +23,18 @@ func readFile() {
 	}
 }
 
+func readFileLineByLine() {
+	// Read file
+	if f, err := os.Open("/tmp/dat"); err != nil {
+		fmt.Println(err)
+	} else {
+		scanner := bufio.NewScanner(f)
+		for scanner.Scan() {
+			fmt.Println(scanner.Text())
+		}
+	}
+}
+
 func main() {
 
 	// Read file
