@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+func updateArray() {
+
+}
+
 func main() {
 	var arr1 [5]int
 
