@@ -7,11 +7,12 @@ import (
 
 func main() {
 	s := "Yes春眠不觉晓"
-	fmt.Println(len(s)) // reutrns length of bytes, NOT the count of chars
+	fmt.Println(len(s)) // len() reutrns length of bytes, NOT the count of chars
+	//RuneCountInString(s) returns char count
 
 	fmt.Printf("%s\n", []byte(s)) // print the sentence
 
-	fmt.Printf("%X\n", []byte(s)) // print the digits
+	fmt.Printf("%X\n", []byte(s)) // print the bytes
 
 	// Print bytes, 每个中文字符三字节
 	for _, b := range []byte(s) {
