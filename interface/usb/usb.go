@@ -2,9 +2,13 @@ package main
 
 import "fmt"
 
+type Connecter interface {
+	Connect()
+}
+
 type USB interface {
 	Name() string
-	Connect()
+	Connecter
 }
 
 type PhoneConnecter struct {
