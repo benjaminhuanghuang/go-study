@@ -6,6 +6,7 @@ type Connecter interface {
 	Connect()
 }
 
+// 嵌套interface
 type USB interface {
 	Name() string
 	Connecter
