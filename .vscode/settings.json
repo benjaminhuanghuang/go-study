@@ -1,3 +1,8 @@
 {
-  "go.testTags": "-v"
+  "go.testTags": "-v",
+  "go.lintFlags": [
+    "--disable-all",
+    "--enable=golint",
+    "--config=~/.gometalinter"
+  ]
 }
