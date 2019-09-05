@@ -20,13 +20,18 @@ const (
 	Sunday
 )
 
-//...
+/*
+	Using iota
+*/
 const (
 	Open = 1 << iota
 	Close
 	Pending
 )
 
+/*
+	Using iota
+*/
 const (
 	b = 1 << (10 * iota)
 	kb
