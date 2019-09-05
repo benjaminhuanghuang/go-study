@@ -1,46 +1,28 @@
 /*
-定义变量有3种方法
-var a int
-var a
-a := 10
+const variable 不要大写，大写表明是变量在package外可以访问
+
 */
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
-func variableZeroValue() {
-	// variables have init value by default
-	// This behavior is defferent with c/c++
-	var a int
-	var s string
+func consts() {
+	const filename = "abc.txt"
+	/*********************************************
+	// 如果指定类型会导致 error: cannot use a * a + b * b (type int) as type float64 in argument to math.Sqrt
+	// const a, b int = 3, 4
+	***********************************************/
+	// 如果不指定类型，常量的类型不确定，在使用时只会做文本替换，不管类型
+	const a, b = 3, 4
+	var c int
+	c = int(math.Sqrt(a*a + b*b))
 
-	//fmt.Println(a, s)    //can not show empty string
-	fmt.Printf("%d, %q", a, s) // %q means quote
-}
-
-func variableTwo() {
-	// auto
-	var a = 1
-	var s = "Hello"
-
-	fmt.Println(a, s)
-}
-
-/*
-不能在function以外使用 :=
-syntax error: non-declaration statement outside function bodygo
-*/
-//errorVariable := 1234
-
-func variableShorter() {
-	// auto
-	a, b, c, s := 3, 4, true, "def"
-
-	fmt.Println(a, b, c, s)
+	fmt.Println(filename, c)
 }
 
 func main() {
-	variableOne()
-	variableTwo()
-	variableShorter()
+	consts()
 }

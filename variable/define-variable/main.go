@@ -3,10 +3,19 @@
 var a int
 var a
 a := 10
+
 */
 package main
 
 import "fmt"
+
+/*
+	package scope variables
+*/
+var (
+	aa = 3
+	bb = "bb"
+)
 
 func variableZeroValue() {
 	// variables have init value by default
@@ -25,12 +34,10 @@ func variableInitialValue() {
 	fmt.Println(a, b, s)
 }
 
-func variableInitialValue2() {
+func variableTypeDeduction() {
 	// auto inferred
-	var a = 1
-	var s = "Hello"
-
-	fmt.Println(a, s)
+	var a, b, c, s = 3, 4, true, "def"
+	fmt.Println(a, b, c, s)
 }
 
 /*
@@ -49,5 +56,6 @@ func variableShorter() {
 func main() {
 	variableZeroValue()
 	variableInitialValue()
+	variableTypeDeduction()
 	variableShorter()
 }
