@@ -27,6 +27,7 @@ func readFile() {
 	}
 }
 
+// Read file line by line
 func readFileLineByLine() {
 	// Read file
 	if f, err := os.Open("/tmp/dat"); err != nil {
