@@ -1,3 +1,6 @@
+/*
+Go 语言指针不能运算
+*/
 package main
 
 import "fmt"

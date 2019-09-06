@@ -5,6 +5,7 @@ import (
 	"math"
 )
 
+// sqrt return result and error
 func sqrt(n float64) (float64, error) {
 	if n < 0 {
 		return 0.0, fmt.Errorf("sqrt of negative value (%f)", n)
