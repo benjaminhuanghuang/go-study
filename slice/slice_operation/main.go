@@ -17,7 +17,7 @@ func main() {
 	copy(s2, s1)
 	printSlice(s2)
 
-	// Delete
+	// Delete [3], s2[4:]... 把[4:]展开为一串可变参数
 	s2 = append(s2[:3], s2[4:]...)
 	printSlice(s2)
 
