@@ -11,7 +11,7 @@ func createMap() {
 
 	m2 := make(map[string]int) //m2 == empty map
 
-	var m3 map[string]int // m3== nil but can be used as empty map
+	var m3 map[string]int // m3== nil but can we can call the method on nil
 
 	fmt.Println(m1, m2, m3)
 }
@@ -37,7 +37,7 @@ func main() {
 	}
 
 	// Getting values
-	// Key 不存在时，获得value 类型的初始值
+	// Key 不存在时，获得value 类型的zero值
 	if value, ok := stocks["TSLA"]; ok {
 		fmt.Println(value)
 	} else {

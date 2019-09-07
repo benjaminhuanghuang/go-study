@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 /*
-	Slice is a view of array
+	Slice is a view of array slice本身没有数据
 */
 func updateSlice(s []int) {
 	s[0] = 100
