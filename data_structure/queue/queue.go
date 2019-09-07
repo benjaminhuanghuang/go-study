@@ -1,9 +1,10 @@
 package queue
 
+// use slice inernal
 type Queue []int
 
 func (q *Queue) Push(v int) {
-
+	*q = append(*q, v) // change the conent of the q
 }
 
 func (q *Queue) Pop() int {
