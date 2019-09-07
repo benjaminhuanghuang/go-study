@@ -36,19 +36,19 @@ func rectDemo() {
 	fmt.Println("Width:", rect.width, "Length:", rect.length)
 }
 
-type treeNode struct {
+type TreeNode struct {
 	value       int
-	left, right *treeNode
+	left, right *TreeNode
 }
 
 func main() {
-	var root treeNode
-	root = treeNode{value: 3}
-	root.left = &treeNode{}
-	root.right = &treeNode{5, nil, nil}
-	root.right.left = new(treeNode)
+	var root TreeNode
+	root = TreeNode{value: 3}
+	root.left = &TreeNode{}
+	root.right = &TreeNode{5, nil, nil}
+	root.right.left = new(TreeNode)
 
-	nodes := []treeNode{
+	nodes := []TreeNode{
 		{value: 3},
 		{},
 		{6, nil, &root},
