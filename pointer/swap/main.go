@@ -9,6 +9,7 @@ func swap(a, b *int) {
 func swapByValue(a, b int) (int, int) {
 	return b, a
 }
+
 func main() {
 	a, b := 3, 4
 	swap(&a, &b)
