@@ -8,8 +8,11 @@ import (
 func main() {
 	s := "Go语言"
 
-	// byte length
+	// len() reutrns length of bytes, NOT the count of chars
 	fmt.Println(len(s))
+
+	fmt.Printf("%s\n", []byte(s)) // print the sentence
+	fmt.Printf("%X\n", []byte(s)) // print the bytes
 
 	// Print each byte, UTF-8 3bytes／汉字
 	for _, b := range []byte(s) {
