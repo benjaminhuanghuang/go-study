@@ -11,6 +11,7 @@ func (q *Queue) Pop() interface{} {
 	head := (*q)[0]
 	*q = (*q)[1:]
 	return head
+	// return head.(int)   // cast valuet to int
 }
 
 func (q *Queue) IsEmpty() bool {

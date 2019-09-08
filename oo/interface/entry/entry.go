@@ -4,16 +4,30 @@ import (
 	"fmt"
 	"time"
 
+	"../interfaces"
 	"../mock"
 	"../real"
-	"../retriever"
 )
 
-func download(r retriever.Retriever) string {
+func download(r interfaces.Retriever) string {
 	return r.Get("http://www.google.com")
 }
 
-func inspect(r retriever.Retriever) {
+func post(poster interfaces.Poster) {
+	poster.Post("http://www.google.com", map[string]string{
+		"name": "ben",
+	})
+}
+
+//
+func session(s interfaces.RetrieverPoster) {
+	s.Get("http://www.google.com")
+	s.Post("http://www.google.com", map[string]string{
+		"name": "ben",
+	})
+}
+
+func inspect(r interfaces.Retriever) {
 	switch v := r.(type) {
 	case mock.Retriever:
 		fmt.Println("Contents:", v.Contents)
@@ -23,7 +37,7 @@ func inspect(r retriever.Retriever) {
 }
 
 func main() {
-	var r retriever.Retriever
+	var r interfaces.Retriever
 	r = mock.Retriever{Contents: "Thie is mock retriver"}
 	inspect(r)
 	// Print type and value
