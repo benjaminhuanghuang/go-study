@@ -1,6 +1,10 @@
 package main
 
-import "../../tree"
+import (
+	"fmt"
+
+	"../../tree"
+)
 
 func main() {
 	root := tree.TreeNode{Value: 3}
@@ -10,4 +14,11 @@ func main() {
 	root.Right.Left.SetValue(4)
 
 	root.Traverse()
+
+	// Pass function to traversal
+	nodeCount := 0
+	root.TraverseFunc(func(node *tree.TreeNode) {
+		nodeCount++
+	})
+	fmt.Println(nodeCount)
 }
