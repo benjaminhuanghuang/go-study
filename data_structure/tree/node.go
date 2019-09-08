@@ -13,7 +13,7 @@ func createNode(value int) *TreeNode {
 
 // Create a method for TreeNode
 func (node *TreeNode) Print() {
-	fmt.Print(node.Value)
+	fmt.Println(node.Value)
 }
 
 // Pass by value
