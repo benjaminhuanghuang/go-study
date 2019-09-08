@@ -7,14 +7,6 @@ import (
 	"strings"
 )
 
-func fibonacci() func() int {
-	a, b := 0, 1
-	return func() int {
-		a, b = b, a+b
-		return a
-	}
-}
-
 // Implement Interface for methods
 func fibonacci2() intGen {
 	a, b := 0, 1
@@ -40,16 +32,6 @@ func printFileContents(reader io.Reader) {
 	for scanner.Scan() {
 		fmt.Println(scanner.Text())
 	}
-}
-
-func test() {
-	f := fibonacci()
-	fmt.Println(f())
-	fmt.Println(f())
-	fmt.Println(f())
-	fmt.Println(f())
-	fmt.Println(f())
-	fmt.Println(f())
 }
 
 func test2() {
