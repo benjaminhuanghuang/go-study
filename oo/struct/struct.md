@@ -9,3 +9,7 @@ stack上分配内存
 - 对于为struct定义的方法，
   - 只用使用pointer接收者才能改变结构中的值
   - nil也可以调用方法
+
+
+## Struct method receiver
+ A method is a funciton with an implicit first argument, called a **receiver**

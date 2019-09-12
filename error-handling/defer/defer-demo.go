@@ -17,16 +17,26 @@ func tryDefer() {
 	fmt.Println(4)
 }
 
+//
+func tryDefer2() {
+	for i := 0; i < 100; i++ {
+		defer fmt.Println(i)
+		if i == 30 {
+			panic("printed too many")
+		}
+	}
+}
+
 func writeFile(fileName string) {
 	file, err := os.Create(fileName)
 	if err != nil {
 		panic(err)
 	}
-	defer file.Close()
+	defer file.Close() // finally
 
 	// file io buffer
 	writer := bufio.NewWriter(file)
-	defer writer.Flush()
+	defer writer.Flush() // finally
 
 	f := fib.Fibonacci()
 	for i := 0; i < 20; i++ {
@@ -36,5 +46,6 @@ func writeFile(fileName string) {
 
 func main() {
 	//tryDefer()
-	writeFile("fib.txt")
+	// writeFile("fib.txt")
+	tryDefer2()
 }
