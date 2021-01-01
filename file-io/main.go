@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"os"
 	"path"
@@ -21,5 +22,13 @@ func ReadFileInUserHome() ([]byte, error) {
 }
 
 func main() {
-	return
+	// dir, err := os.Executable()
+	// dir, err := filepath.Abs(filepath.Dir(os.Args[0]))
+	dir := os.Args[0]
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	fmt.Println(dir)
+
+	fmt.Println(">> Current Path: " + dir)
 }
