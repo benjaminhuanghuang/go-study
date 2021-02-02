@@ -1,6 +1,7 @@
 /*
 const variable 不要大写，大写表明是变量在package外可以访问
 
+const 不要指定类型
 */
 package main
 
