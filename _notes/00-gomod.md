@@ -30,7 +30,8 @@ gomod 会在 $GOPATH/pkg/mod 目录下保存包源码和链接库。
 
 ## go mod command
 ```
-  go mod download 下载模块到本地缓存，缓存路径是 $GOPATH/pkg/mod/cache
+  go mod download 下载模块到本地缓存，缓存路径是 $GOPATH/pkg/mod/cache, 多个项目可以共享缓存的module。
+
   go mod edit 是提供了命令版编辑 go.mod 的功能，例如 go mod edit -fmt go.mod 会格式化 go.mod
   go mod graph 把模块之间的依赖图显示出来
   go mod init 初始化模块（例如把原本dep管理的依赖关系转换过来）
@@ -39,7 +40,16 @@ gomod 会在 $GOPATH/pkg/mod 目录下保存包源码和链接库。
   go mod verify 确认依赖关系
   go mod why 解释为什么需要包和模块
 ```
-查看所有以升级依赖版本
+
+## go module 管理
 ```
-$ go list -u -m all
+  go mod init   <project id>
+
+  go build             # 编译安装
+
+  go list -m list      # 查看所有以升级依赖版本
+
+  go get
+
+  go mod tiny          # 删除不必要的库
 ```
